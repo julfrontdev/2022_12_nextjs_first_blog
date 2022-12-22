@@ -21,7 +21,7 @@ export default function Page4({ posts }) {
       <Head>
         <title>Mon premier blog</title>
       </Head>
-      <h1>Page2 avec getStaticProps</h1>
+      <h1>Page4 avec getStaticProps</h1>
       <br />
       <h2>Compteur: {count}</h2>
       <br />
