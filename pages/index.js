@@ -5,6 +5,8 @@ import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+// blog cf. https://www.youtube.com/watch?v=wTFThzLcrOk&ab_channel=Grafikart.fr
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
