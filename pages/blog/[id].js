@@ -6,6 +6,10 @@ export default function Post({ post }) {
       <main>
         <Link href="/page3">Revenir à la page 3</Link>
         <br />
+        <Link href="/page4">Revenir à la page 4</Link>
+        <br />
+        <Link href="/page5">Revenir à la page 5</Link>
+        <br />
         <h1>{post.title}</h1>
         <p>{post.body}</p>
       </main>

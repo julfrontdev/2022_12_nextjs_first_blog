@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,8 @@ export default function Home() {
         <title>Mon premier blog</title>
       </Head>
       <h1>Mon premier blog</h1>
+      <br />
+      <Link href={`/page2`}>Page 2</Link>
       <br />
       <ul>
         {posts.map((post) => (

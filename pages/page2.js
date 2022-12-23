@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,10 @@ export default function Page2({ posts }) {
       <br />
       <h2>Compteur: {count}</h2>
       <br />
+      <Link href={`/`}>Revenir à la page 1</Link>
+      <br />
+      <Link href={`/page3`}>Page 3</Link>
+      <br />
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -36,7 +41,7 @@ export default function Page2({ posts }) {
 // Next récupère les données en amont (précharge) et donne le rendu
 export async function getStaticProps() {
   const posts = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=4`
+    `https://jsonplaceholder.typicode.com/posts?_limit=2`
   ).then((r) => r.json());
   return {
     props: {

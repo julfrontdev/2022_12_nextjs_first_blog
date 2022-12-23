@@ -21,9 +21,11 @@ export default function Page4({ posts }) {
       <Head>
         <title>Mon premier blog</title>
       </Head>
-      <h1>Page4 avec getStaticProps</h1>
+      <h1>Page4 avec getServerSideProps en Server Side Rendering SSR </h1>
       <br />
       <h2>Compteur: {count}</h2>
+      <br />
+      <Link href={`/page5`}>Page 5</Link>
       <br />
       <ul>
         {posts.map((post) => (
@@ -41,7 +43,7 @@ export default function Page4({ posts }) {
 }
 
 // Next récupère les données en amont (précharge) et donne le rendu
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const posts = await fetch(
     `https://jsonplaceholder.typicode.com/posts?_limit=4`
   ).then((r) => r.json());

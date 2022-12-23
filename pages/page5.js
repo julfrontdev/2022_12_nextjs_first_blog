@@ -7,7 +7,9 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Page3({ posts }) {
+// SSR Server Side Rendering
+
+export default function Page5({ posts, date }) {
   const [count, setCount] = useState(0);
   useEffect(() => {
     const timer = setInterval(() => setCount((n) => n + 1), 1000);
@@ -19,11 +21,11 @@ export default function Page3({ posts }) {
       <Head>
         <title>Mon premier blog</title>
       </Head>
-      <h1>Page3 avec getStaticProps</h1>
+      <h1>Page5 avec approche statique incrémentale (approche hybride)</h1>
       <br />
-      <h2>Compteur: {count}</h2>
-      <br />
-      <Link href={`/page4`}>Page 4</Link>
+      <h2>
+        Compteur: {count} - {date}
+      </h2>
       <br />
       <ul>
         {posts.map((post) => (
@@ -43,11 +45,13 @@ export default function Page3({ posts }) {
 // Next récupère les données en amont (précharge) et donne le rendu
 export async function getStaticProps() {
   const posts = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=3`
+    `https://jsonplaceholder.typicode.com/posts?_limit=5`
   ).then((r) => r.json());
   return {
     props: {
       posts,
+      date: new Date().toString(),
     },
+    revalidate: 5,
   };
 }
