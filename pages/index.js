@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <h1>Mon premier blog</h1>
       <br />
-      <Link href={`/page2`}>Page 2</Link>
+      <Link href={`/page2`}>Aller à la page 2</Link>
       <br />
       <ul>
         {posts.map((post) => (

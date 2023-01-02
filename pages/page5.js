@@ -27,6 +27,8 @@ export default function Page5({ posts, date }) {
         Compteur: {count} - {date}
       </h2>
       <br />
+      <Link href={`/`}>Revenir à la page 1</Link>
+      <br />
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -38,6 +40,7 @@ export default function Page5({ posts, date }) {
           </li>
         ))}
       </ul>
+      <br />
     </>
   );
 }
