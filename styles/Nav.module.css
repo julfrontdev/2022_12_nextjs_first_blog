@@ -10,7 +10,7 @@
     padding-left: 8px;
 }
 
-/* Shaking on hover */
+/* Shaking button on hover */
 .nav:hover {
     background-color: gold;
     transition: 300ms;

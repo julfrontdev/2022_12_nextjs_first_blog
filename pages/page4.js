@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Layout.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Nav from "../components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function Page4({ posts }) {
       <br />
       <h2>Compteur: {count}</h2>
       <br />
+      <Nav />
       <Link href={`/page5`}>Page 5</Link>
       <br />
       <ul>

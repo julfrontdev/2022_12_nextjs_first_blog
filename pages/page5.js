@@ -45,9 +45,6 @@ export default function Page5({ posts, date }) {
       <br />
       {/* Nav component with Nav.module.css style */}
       <Nav />
-      {/* <Link href={`/`}>
-        <div className="nav">Revenir à la page 1</div>
-      </Link> */}
       <br />
       <ul>
         {posts.map((post) => (
