@@ -95,6 +95,7 @@ body {
     )
     rgb(var(--background-start-rgb)); */
     background-color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -106,4 +107,23 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem 0;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 1rem 0;
 }

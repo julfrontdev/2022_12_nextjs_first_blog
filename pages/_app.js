@@ -1,10 +1,10 @@
+import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    // <div style={{ backgroundColor: "white" }}>
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
-  // </div>
-  // );
 }

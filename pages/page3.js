@@ -1,11 +1,23 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Layout.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
+
+// Next récupère les données en amont (précharge) et donne le rendu
+export async function getStaticProps() {
+  const posts = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?_limit=3`
+  ).then((r) => r.json());
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default function Page3({ posts }) {
   const [count, setCount] = useState(0);
@@ -13,13 +25,12 @@ export default function Page3({ posts }) {
     const timer = setInterval(() => setCount((n) => n + 1), 1000);
     return () => clearInterval(timer);
   });
-
   return (
     <>
       <Head>
         <title>Mon premier blog</title>
       </Head>
-      <h1>Page3 avec getStaticProps</h1>
+      <h1>Page 3 avec getStaticProps</h1>
       <br />
       <h2>Compteur: {count}</h2>
       <br />
@@ -38,16 +49,4 @@ export default function Page3({ posts }) {
       </ul>
     </>
   );
-}
-
-// Next récupère les données en amont (précharge) et donne le rendu
-export async function getStaticProps() {
-  const posts = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=3`
-  ).then((r) => r.json());
-  return {
-    props: {
-      posts,
-    },
-  };
 }
