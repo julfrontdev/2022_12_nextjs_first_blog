@@ -28,7 +28,7 @@ export default function Page2({ posts }) {
   return (
     <>
       <Head>
-        <title>Mon premier blog</title>
+        <title>My first blog 2</title>
       </Head>
       <h1>Page 2 avec getStaticProps</h1>
       <br />

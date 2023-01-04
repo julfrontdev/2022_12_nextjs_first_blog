@@ -28,7 +28,7 @@ export default function Page3({ posts }) {
   return (
     <>
       <Head>
-        <title>Mon premier blog</title>
+        <title>My first blog 3</title>
       </Head>
       <h1>Page 3 avec getStaticProps</h1>
       <br />

@@ -31,7 +31,7 @@ export default function Page4({ posts }) {
   return (
     <>
       <Head>
-        <title>Mon premier blog</title>
+        <title>My first blog 4</title>
       </Head>
       <h1>Page 4 avec getServerSideProps en Server Side Rendering SSR </h1>
       <br />

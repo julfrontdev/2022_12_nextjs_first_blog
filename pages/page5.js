@@ -34,7 +34,7 @@ export default function Page5({ posts, date }) {
   return (
     <>
       <Head>
-        <title>Mon premier blog</title>
+        <title>My first blog 5</title>
       </Head>
       <h1>Page 5 avec approche statique incrémentale (approche hybride)</h1>
       <br />

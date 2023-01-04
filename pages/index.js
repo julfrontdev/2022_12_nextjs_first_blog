@@ -19,9 +19,9 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Mon premier blog</title>
-      </Head>
+      </Head> */}
       <h1>Mon premier blog</h1>
       <br />
       <Link href={`/page2`}>Aller à la page 2</Link>
