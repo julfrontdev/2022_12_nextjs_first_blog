@@ -4,7 +4,6 @@ import client  from "../../apollo-client"
 
 function blog( { data }) {
     const posts = data.posts.edges.map((post) => post.node);
-    console.log(posts);
     return (
         <>
             <h1>Blog alimenté par Wordpress</h1>
